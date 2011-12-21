@@ -1,0 +1,43 @@
+T-106.5900 Object-oriented Software Development: Project
+General instructions
+
+In this project, you will design an object-oriented program and implement it in C++. You may choose one of the following topics or, by agreement with your teacher, a topic of your own.
+
+    * Mail-order distribution centre
+    * Medical emergency services planning
+
+You should document your program in the following forms:
+
+    * A brief text document describing how to use your program and how it is structured
+    * A class diagram explaining the structure of your program from an appropriate perspective
+    * Test/example inputs demonstrating the functionality of your program
+
+The documentation can be submitted in OpenDocument, PDF, HTML or plain text forms. Diagrams may also be submitted as Dia files.
+
+As in the exercises, you may work alone or with another student.
+
+Submit the Eclipse project, including the documentation, as a ZIP archive to Rubyric before 2012-01-10 23:59.
+
+Link: https://rubyric.cs.hut.fi/submit/497
+
+
+T-106.5900 Object-oriented Software Development: Project
+Mail-order distribution centre
+Background
+
+Small mail-order company Vantaanjoki is going international and is now experiencing the unprecedented issue of having to co-ordinate several employees preparing packages for delivery. To cope with these new demands, the company is looking to leverage its high-tech information systems (i.e. an old East German VAX clone the owner bought shortly after the Berlin Wall fell hooked up to an ancient Remington Rand teletype) to cope with the ever-increasing pace of modern logistics, and have approached you, a student, to provide a custom-made inventory system that fits their equipment, process and budget requirements.
+Features
+
+The customer needs a system that can keep track of inventory and orders made by customers. The inventory consists of different types of items that the company procures from various suppliers: books, long-play records, compact audio cassettes and video cassettes. There may be several copies of each item in the inventory; they are assumed to be identical (the fact that half the Betamax tapes sold by the company are worn out is the returns department's concern, not yours). Each item has a name and a price that may be changed by the company. New items can be added and old items removed from the system. Also, the company may deliver to several countries in Europe, each of which has different VAT percentages and postage costs for the four item types mentioned above (thanks to a literal grandfather clause in the deal with the post office negotiated by the founder of the company in 1959, the size of the packages and the individual books does not matter, only the item type). You need to be able to define new countries and specify and change the costs for delivering to them.
+
+At any time, it should be possible to get a list of current inventory from the computer. This can be done either by item (e.g. to answer the question "How many copies of Alice in Wonderland do we have in stock?") or a full list of all the inventory.
+
+Customers may place orders, which contain a delivery address and a list of items (and their quantities). It should be possible to ask the system which orders can be fulfilled (i.e. all the items are available) and tell the system that the items have been taken from inventory and put in a package to be sent to the customer. When items are put in a package, a receipt is printed out (which is photocopied and added to the package, while the original printout is kept for accounting purposes). The receipt contains a list of the items and their quantities and prices (with the postage and tax marked separately and a total for each line) as well as a grand total. Also, an address label for the package is printed that contains the delivery address.
+
+In order to work out what new stock is needed, there has to be a command that gets a list of everything customers have ordered that is not in inventory (i.e. what needs to be purchased to complete all open orders). When the acquisitions department finds new items (i.e. when he gets back from yet another flea market or yard sale), the inventory must be updated to reflect this.
+Bonus functionality
+
+If you have time to spare, you could look into reading and writing files in C++ and create the code necessary to save the state of the system to disk, just in case a suitable spare hard disk would fall off the back of a lorry.
+Resources and I/O
+
+Surprisingly, the current version of GCC can compile to VAX just fine, so you can work in your usual development environment. Since the customer's old VAX has a dodgy hard drive (it's a miracle it manages to boot in only three attempts, on average), saving the state of orders to disk is pointless; if the power goes, they'll have to retype everything from the hard copies. Luckily, there's tonnes of continuous stationery and ink ribbons that were thrown out by various local companies to feed the teletype with, so as long as your program writes clear descriptions of every operation that was performed to the console, recovery from system failure is no problem; the secretary doesn't mind working overtime once or twice a year typing the inventory back in. Basically, standard input and output is what you have to work with. 
