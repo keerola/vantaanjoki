@@ -12,6 +12,13 @@ class order {
 public:
 	order();
 	virtual ~order();
+	boolean isPossibleToShip ();
+	 collectShipPrint ();
+	listOfItems getItemstoBeOrdered ();
+	 printOrder ();
+	int orderNo;
+	string customer;
+	string address;
 };
 
 #endif /* ORDER_H_ */
