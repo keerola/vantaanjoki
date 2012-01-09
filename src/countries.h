@@ -7,6 +7,8 @@
 
 #ifndef COUNTRIES_H_
 #define COUNTRIES_H_
+#include <iostream>
+#include <map>
 
 class countries {
 public:
@@ -14,10 +16,10 @@ public:
 	virtual ~countries();
 	void updateVat (double country);
 	void updatePostagePrice (double country);
-	double getVAT (string country);
-	double getPostagePrice (string country);
+	double getVAT (std::string country);
+	double getPostagePrice (std::string country);
 private:
-	MapOfCountrynamesAndDoublesAndDoubles postagePricesVATs;
+	std::map<std::string, double, double> postagePricesVATs;
 };
 
 #endif /* COUNTRIES_H_ */
