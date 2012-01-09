@@ -16,7 +16,7 @@ public:
 	void printAllOfOrdersNotInStock ();
 	void printFullStockStatus ();
 	void printOrder (int orderNo);
-	Item query (string item.name);
+/*	Item query (string item.name);
 	Order query (int OrderNo);
 	void addItem (Item item);
 	Item getItem (string name);
@@ -28,7 +28,7 @@ public:
 	void setPrice (double item.price,
 	           string item.name);
 	void setStockAmount (int amount,
-	                 string item.name);
+	                 string item.name);*/
 };
 
 #endif /* INVENTORY_H_ */

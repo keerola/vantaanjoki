@@ -8,6 +8,8 @@
 #ifndef ITEM_H_
 #define ITEM_H_
 
+#include <iostream>
+
 class item {
 public:
 	item();
@@ -16,14 +18,14 @@ public:
 	double getPrice ();
 	double getPostalFee ();
 	int getStockStatus ();
-	string getItemType ();
-	country getCountry (string country);
-	double getVAT (string country);
-	double getPostagePrice (string country);
-	removeCountry (string name);
-	void for all setters for all but item type ( various);
+	std::string getItemType ();
+//	country getCountry (std::string country);
+	double getVAT (std::string country);
+	double getPostagePrice (std::string country);
+	void removeCountry (std::string name);
+//	void for all setters for all but item type ( various);
 private:
-	string name;
+	std::string name;
 	double price;
 	double postalFee;
 	int stockAmount;

@@ -7,18 +7,20 @@
 
 #ifndef ORDER_H_
 #define ORDER_H_
+#include <iostream>
+#include <vector>
 
 class order {
 public:
 	order();
 	virtual ~order();
-	boolean isPossibleToShip ();
-	 collectShipPrint ();
-	listOfItems getItemstoBeOrdered ();
-	 printOrder ();
+	bool isPossibleToShip ();
+	void collectShipPrint ();
+	std::vector<std::string> listOfItems();
+	void printOrder ();
 	int orderNo;
-	string customer;
-	string address;
+	std::string customer;
+	std::string address;
 };
 
 #endif /* ORDER_H_ */
