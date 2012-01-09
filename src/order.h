@@ -9,16 +9,16 @@
 #define ORDER_H_
 
 class order {
-public:
-	order();
-	virtual ~order();
-	boolean isPossibleToShip ();
-	 collectShipPrint ();
-	listOfItems getItemstoBeOrdered ();
-	 printOrder ();
 	int orderNo;
 	string customer;
 	string address;
+public:
+	order();
+	virtual ~order();
+	bool isPossibleToShip ();
+	void collectShipPrint ();
+	item& getItemstoBeOrdered (); //listOfItems
+	void printOrder ();
 };
 
 #endif /* ORDER_H_ */

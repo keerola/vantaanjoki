@@ -7,6 +7,10 @@
 
 #ifndef ITEM_H_
 #define ITEM_H_
+using namespace std;
+#include <cstdlib>
+#include <string>
+#include "countries.h"
 
 class item {
 public:
@@ -17,11 +21,12 @@ public:
 	double getPostalFee ();
 	int getStockStatus ();
 	string getItemType ();
-	country getCountry (string country);
+	//country getCountry (string country);
+	countries::priceVat& isCountry (string countryName); //in the table? return val, else null, in countries !!
 	double getVAT (string country);
 	double getPostagePrice (string country);
-	removeCountry (string name);
-	void for all setters for all but item type ( various);
+	void removeCountry (string name);
+	void setters();//for all setters for all but item type ( various); //TODO!!!!!!
 private:
 	string name;
 	double price;
