@@ -14,7 +14,7 @@ class item {
 public:
 	item();
 	virtual ~item();
-	double getName ();
+	std::string getName ();
 	double getPrice ();
 	double getPostalFee ();
 	int getStockStatus ();
@@ -29,6 +29,7 @@ private:
 	double price;
 	double postalFee;
 	int stockAmount;
+	std::string type;
 };
 
 #endif /* ITEM_H_ */

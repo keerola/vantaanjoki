@@ -18,7 +18,7 @@ public:
 	void updatePostagePrice (double country);
 	double getVAT (std::string country);
 	double getPostagePrice (std::string country);
-private:
+//private:
 	std::map<std::string, double, double> postagePricesVATs;
 };
 
