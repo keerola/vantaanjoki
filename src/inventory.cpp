@@ -31,6 +31,17 @@ inventory::~inventory() {
 
 
 void
+inventory::addItem (item Item){
+	itemInventory[Item.getItemType()]->first.push_back(Item);
+}
+
+item
+inventory::getItem (string name){
+	   //item Item;
+	   //return Item;
+}
+
+void
 inventory::printAllOrdersInStock (){
 
 }
@@ -62,16 +73,6 @@ inventory::query (int OrderNo){
    return Order;
 }
 
-void
-inventory::addItem (item Item){
-
-}
-
-item
-inventory::getItem (string name){
-	   item Item;
-	   return Item;
-}
 
 void
 inventory::removeItem ( string name){
