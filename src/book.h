@@ -8,11 +8,15 @@
 #ifndef BOOK_H_
 #define BOOK_H_
 
-class book {
+#include "countries.h"
+#include "item.h"
+
+class book : public item {
 public:
-	book();
+	book(countries *Countries);
 	virtual ~book();
 private:
+	countries *postagePricesAndVATsPerCountry;
 };
 
 
