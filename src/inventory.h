@@ -7,28 +7,38 @@
 
 #ifndef INVENTORY_H_
 #define INVENTORY_H_
+#include "book.h"
+#include "item.h"
+#include "order.h"
 
 class inventory {
+
 public:
+	//these list of countries is referred by all of this item type in the constr
+    book     *pricesAndVATsForBook; // incl. countries
+	//record *pricesAndVATsForRecord;
+	//audioCassette  *pricesAndVATsForAudio;
+	//videoCassette  *pricesAndVATsForVideo;
 	inventory();
 	virtual ~inventory();
 	void printAllOrdersInStock ();
 	void printAllOfOrdersNotInStock ();
 	void printFullStockStatus ();
 	void printOrder (int orderNo);
-/*	Item query (string item.name);
-	Order query (int OrderNo);
-	void addItem (Item item);
-	Item getItem (string name);
-	 removeItem ( name:string);
+
+	item query (string itemName);
+	order query (int OrderNo);
+	void addItem (item Item);
+	item getItem (string name);
+	void removeItem ( string name);
+
 	void setPostagePrice (string country,
 	                  string itemType);
 	void setVAT (string country,
 	         string itemType);
-	void setPrice (double item.price,
-	           string item.name);
-	void setStockAmount (int amount,
-	                 string item.name);*/
+	void setPrice (double itemPrice,
+	           string itemName);
+	void setStockAmount (int amount, string itemName);
 };
 
 #endif /* INVENTORY_H_ */

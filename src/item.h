@@ -7,6 +7,10 @@
 
 #ifndef ITEM_H_
 #define ITEM_H_
+using namespace std;
+#include <cstdlib>
+#include <string>
+#include "countries.h"
 
 #include <iostream>
 
@@ -14,22 +18,24 @@ class item {
 public:
 	item();
 	virtual ~item();
-	std::string getName ();
+	string getName ();
 	double getPrice ();
 	double getPostalFee ();
 	int getStockStatus ();
-	std::string getItemType ();
-//	country getCountry (std::string country);
-	double getVAT (std::string country);
-	double getPostagePrice (std::string country);
-	void removeCountry (std::string name);
-//	void for all setters for all but item type ( various);
+	string getItemType ();
+	//country getCountry (string country);
+	countries::priceVat& isCountry (string countryName); //in the table? return val, else null, in countries !!
+	double getVAT (string country);
+	double getPostagePrice (string country);
+	void removeCountry (string name);
+	void setters();//for all setters for all but item type ( various); //TODO!!!!!!
+
 private:
-	std::string name;
+	string name;
 	double price;
 	double postalFee;
 	int stockAmount;
-	std::string type;
+	string type;
 };
 
 #endif /* ITEM_H_ */
