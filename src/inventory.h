@@ -15,7 +15,7 @@
 class inventory {
 
 private:
-	typedef vector<item> items;
+	typedef map<string, item> items;
 	typedef pair<items, countries> itemDatas;
 public:
 	map<string,itemDatas*> itemInventory; //elem: <"book", ...>
@@ -32,10 +32,10 @@ public:
 	void printFullStockStatus ();
 	void printOrder (int orderNo);
 
-	item query (string itemName);
+	item &query (string itemName);
 	order query (int OrderNo);
 	void addItem (item Item);
-	item getItem (string name);
+	item getItem (string name, string type);
 	void removeItem ( string name);
 
 	void setPostagePrice (string country,
