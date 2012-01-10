@@ -17,7 +17,7 @@ item::~item() {
 	// TODO Auto-generated destructor stub
 }
 
-std::string
+string
 item::getName() {
 	return this->name;
 }
@@ -37,19 +37,19 @@ item::getStockStatus () {
 	return this->stockAmount;
 }
 
-std::string
+string
 item::getItemType () {
 	return this->type;
 }
-//	country getCountry (std::string country);
+//	country getCountry (string country);
 double
-item::getVAT (std::string country) {
+item::getVAT (string country) {
 	return 0.0;
 }
 
 double
-item::getPostagePrice (std::string country) {
-/*	std::map<postagePricesVAT>::iterator it;
+item::getPostagePrice (string country) {
+/*	map<postagePricesVAT>::iterator it;
 	if(!(postagePricesVAT.empty())) {
 		  for ( it=postagePricesVAT.begin() ; it < postagePricesVAT.end(); it++ ){
 			if(it->first == country.c_str()) {
@@ -61,5 +61,5 @@ item::getPostagePrice (std::string country) {
 	return 0.0;
 }
 
-void removeCountry (std::string name);
+void removeCountry (string name);
 
