@@ -32,13 +32,13 @@ inventory::~inventory() {
 
 void
 inventory::addItem (item Item){
-	itemInventory[Item.getItemType()]->first.push_back(Item);
+	(itemInventory[Item.getItemType()]) -> first[Item.getName()]=Item;
 }
 
 item
-inventory::getItem (string name){
-	   //item Item;
-	   //return Item;
+inventory::getItem (string name, string type){
+    return itemInventory[type]->first[name];
+
 }
 
 void
@@ -61,10 +61,17 @@ inventory::printOrder (int orderNo){
 
 }
 
-item
+item&
 inventory::query (string itemName){
-   item Item;
-   return Item;
+
+	//TODO instead of true, do map<..>iterator and find (compare to end...)
+	if (true) return (itemInventory["book"]->first[itemName]);
+	if (false) return (itemInventory["record"]->first[itemName]);
+	if (false) return (itemInventory["videoCassette"]->first[itemName]);
+	if (false) return (itemInventory["audioCassette"]->first[itemName]);
+
+	item *it= new item();
+    return *it;
 }
 
 order
