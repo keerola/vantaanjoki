@@ -8,8 +8,21 @@
 #include "inventory.h"
 
 inventory::inventory() {
-	// TODO Auto-generated constructor stub
+//private:
+//	typedef vector<item> items;
+//	typedef pair<items, countries> itemDatas;
+//public:
+//	map<string,itemDatas*> itemInventory; //elem: <"book", ...>
 
+	itemDatas *lp_itemDatasB = new itemDatas(); //meneekohan tama perille?
+	itemDatas *lp_itemDatasR = new itemDatas();
+	itemDatas *lp_itemDatasV = new itemDatas();
+	itemDatas *lp_itemDatasA = new itemDatas();
+    // in case the itemtype is not there as a key, it will be inserted
+	itemInventory["book"]          = lp_itemDatasB;
+	itemInventory["record"]        = lp_itemDatasR;
+	itemInventory["videoCassette"] = lp_itemDatasV;
+	itemInventory["audioCassette"] = lp_itemDatasA;
 }
 
 inventory::~inventory() {
@@ -86,7 +99,7 @@ inventory::setStockAmount (int amount, string itemName){
 
 
 //testataan
-void vantaanjokiTest() {
+void vantaanjokiTest(inventory *testiMaa) {
 
     string maa_1 = "suomi";
     string kirja_1 = "Poija Mappanen: Maija Poppanen";
@@ -113,6 +126,7 @@ void vantaanjokiTest() {
 }
 
 int main(void) {
-	vantaanjokiTest();
+	inventory *teostenHautausmaa;
+	vantaanjokiTest(teostenHautausmaa);
 	return 0;
 }
