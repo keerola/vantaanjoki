@@ -16,6 +16,75 @@ inventory::~inventory() {
 	// TODO Auto-generated destructor stub
 }
 
+
+void
+inventory::printAllOrdersInStock (){
+
+}
+
+void
+inventory::printAllOfOrdersNotInStock (){
+
+}
+
+void
+inventory::printFullStockStatus (){
+
+}
+
+void
+inventory::printOrder (int orderNo){
+
+}
+
+item
+inventory::query (string itemName){
+   item Item;
+   return Item;
+}
+
+order
+inventory::query (int OrderNo){
+   order Order;
+   return Order;
+}
+
+void
+inventory::addItem (item Item){
+
+}
+
+item
+inventory::getItem (string name){
+	   item Item;
+	   return Item;
+}
+
+void
+inventory::removeItem ( string name){
+
+}
+
+void
+inventory::setPostagePrice (string country, string itemType){
+
+}
+
+void
+inventory::setVAT (string country, string itemType){
+
+}
+
+void
+inventory::setPrice (double itemPrice, string itemName){
+
+}
+void
+inventory::setStockAmount (int amount, string itemName){
+
+}
+
+
 //testataan
 void vantaanjokiTest() {
 
