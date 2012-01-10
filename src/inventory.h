@@ -10,12 +10,18 @@
 #include "book.h"
 #include "item.h"
 #include "order.h"
+#include "countries.h"
 
 class inventory {
 
+private:
+	typedef vector<item> items;
+	typedef pair<items, countries> itemDatas;
 public:
+	map<string,itemDatas*> itemInventory; //elem: <"book", ...>
+
 	//these list of countries is referred by all of this item type in the constr
-    book     *pricesAndVATsForBook; // incl. countries
+    //book     *pricesAndVATsForBook; // incl. countries
 	//record *pricesAndVATsForRecord;
 	//audioCassette  *pricesAndVATsForAudio;
 	//videoCassette  *pricesAndVATsForVideo;
