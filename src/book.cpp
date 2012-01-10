@@ -7,8 +7,10 @@
 
 #include "book.h"
 
-book::book() {
-	// TODO Auto-generated constructor stub
+//book::book(countries *Countries):item(){ // default constructor of item invoked prior
+book::book(countries *Countries){ // default constructor of item invoked prior as default
+
+	postagePricesAndVATsPerCountry = Countries;
 
 }
 
