@@ -36,6 +36,7 @@ public:
 	priceVat& isCountry (string countryName);  //is it in the table, return val, else null
 	double getVAT (string countryName);
 	double getPostagePrice (string countryName);
+	std::string getCountry();
 
 };
 

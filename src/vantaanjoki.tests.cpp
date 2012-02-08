@@ -1,10 +1,17 @@
-#include "untitled.hpp"
+#include "countries.h"
+#include "book.h"
+#include "order.h"
+#include "inventory.h"
 #include <cassert>
+#include <assert.h>
 #include <iostream>
 
 static void example()
 {
-    assert(hhg() == 6*9);
+	
+    countries* Test = new countries("moro", 2.0, 2.0);
+	
+    assert(Test->getCountry() != NULL);
 }
 
 typedef void test();

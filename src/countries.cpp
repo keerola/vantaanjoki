@@ -55,8 +55,8 @@ countries::getPostagePrice (string countryName){
 void
 countries::updateVat (string countryName, double vat){
     priceVat lv_priceVat(getPostagePrice(countryName), vat);
-    priceVat *lp_priceVat = postagePricesVATs[countryName];
-    lp_priceVat = &lv_priceVat;
+//    priceVat *lp_priceVat = postagePricesVATs[countryName];
+//    lp_priceVat = &lv_priceVat;
     //TODO? and where does the previous pointed mem go? freeing needed?
 }
 void
@@ -68,4 +68,9 @@ countries::updatePostagePrice (string countryName, double pprice){
     //TODO? and where does the previous pointed mem go? freeing needed?
 
 }
+std::string 
+countries::getCountry() {
+	return this->countryName;
+}
+
 

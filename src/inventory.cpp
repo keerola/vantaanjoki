@@ -133,8 +133,8 @@ void vantaanjokiTest(inventory *testiMaa) {
 
 }
 
-int main(void) {
+/*int main(void) {
 	inventory *teostenHautausmaa;
 	vantaanjokiTest(teostenHautausmaa);
 	return 0;
-}
+}*/
