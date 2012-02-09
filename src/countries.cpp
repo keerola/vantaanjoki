@@ -70,7 +70,7 @@ countries::updatePostagePrice (string countryName, double pprice){
 }
 string 
 countries::getCountry() {
-	return "perkele";
+	return "Sweden";
 }
 
 
