@@ -11,7 +11,7 @@ static void example()
 	
     countries* Test = new countries("moro", 2.0, 2.0);
 	
-    assert(Test->getCountry() != NULL);
+    assert(Test->getCountry() == "perkele");
 }
 
 typedef void test();

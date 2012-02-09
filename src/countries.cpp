@@ -68,9 +68,9 @@ countries::updatePostagePrice (string countryName, double pprice){
     //TODO? and where does the previous pointed mem go? freeing needed?
 
 }
-std::string 
+string 
 countries::getCountry() {
-	return this->countryName;
+	return "perkele";
 }
 
 
