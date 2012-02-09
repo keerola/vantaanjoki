@@ -2,3 +2,8 @@
 *.d
 Debug/
 Debug/*
+*~
+.project
+.cproject
+run.tests
+
